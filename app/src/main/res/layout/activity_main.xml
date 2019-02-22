@@ -1,18 +1,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffc4b2"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="400dp"
         android:layout_centerInParent="true"
         android:background="#ffffffff"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/heart" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,14 +33,14 @@
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="ชื่อผู้ใช้งาน"
             android:padding="16dp" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="รหัสผ่าน"
             android:inputType="textPassword"
             android:padding="16dp" />
 
@@ -52,7 +59,7 @@
                 android:layout_marginTop="16dp"
                 android:background="#c96f53"
                 android:onClick="onRegister"
-                android:text="Register"
+                android:text="สมัครสมาชิค"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
 
@@ -66,7 +73,7 @@
                 android:layout_marginTop="16dp"
                 android:background="#c96f53"
                 android:onClick="onLogin"
-                android:text="Login"
+                android:text="เข้าสู่ระบบ"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
 

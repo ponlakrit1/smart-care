@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Firstname"
+            android:text="ชื่อ"
             android:textSize="15dp" />
 
         <EditText
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Lastname"
+            android:text="นามสกุล"
             android:textSize="15dp" />
 
         <EditText
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Date of birth"
+            android:text="วันเกิด"
             android:textSize="15dp" />
 
         <EditText
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Weight"
+            android:text="น้ำหนัก"
             android:textSize="15dp" />
 
         <EditText
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Height"
+            android:text="ส่วนสูง"
             android:textSize="15dp" />
 
         <EditText
@@ -96,7 +96,7 @@
             android:layout_marginBottom="10dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Blood group"
+            android:text="กรุ๊ปเลือด"
             android:textSize="15dp" />
 
         <Spinner
@@ -114,7 +114,7 @@
             android:background="#c96f53"
             android:textColor="#ffffff"
             android:textSize="18sp"
-            android:text="Submit"/>
+            android:text="บันทึก"/>
 
     </LinearLayout>
 

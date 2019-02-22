@@ -7,23 +7,23 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_home"
-            android:title="Home" />
+            android:title="หน้าแรก" />
         <item
             android:id="@+id/nav_food"
             android:icon="@drawable/ic_menu_food"
-            android:title="Food" />
+            android:title="อาหาร" />
         <item
             android:id="@+id/nav_cal"
             android:icon="@drawable/ic_menu_cal"
-            android:title="Calories balance" />
+            android:title="แคลอรี่ต่อวัน" />
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_menu_profile"
-            android:title="Profile" />
+            android:title="ผู้ใช้งาน" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_menu_logout"
-            android:title="Logout" />
+            android:title="ออกจากระบบ" />
     </group>
 
 </menu>

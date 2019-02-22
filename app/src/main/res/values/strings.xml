@@ -3,12 +3,12 @@
     <string name="title_activity_main2">Smart care</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Smart care</string>
+    <string name="nav_header_title">ชื่อ ผู้ใช้งาน</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="spinner_prompt">Choose you blood group</string>
+    <string name="spinner_prompt">กรุณาเลือกกรุ๊ปเลือด</string>
     <string-array name="blood">
         <item>O</item>
         <item>A</item>
@@ -16,11 +16,11 @@
         <item>AB</item>
     </string-array>
 
-    <string name="spinner_foodTime">Choose you food time</string>
+    <string name="spinner_foodTime">กรุณาเลือกช่วงเวลา</string>
     <string-array name="foodTime">
-        <item>Breakfast</item>
-        <item>Lunch</item>
-        <item>Dinner</item>
-        <item>Snack</item>
+        <item>อาหารเช้า</item>
+        <item>อาหารเที่ยง</item>
+        <item>อาหารเย็น</item>
+        <item>ของว่าง</item>
     </string-array>
 </resources>

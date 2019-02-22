@@ -17,7 +17,7 @@ public class FoodFragment extends Fragment implements AdapterView.OnItemClickLis
 
     View view;
     String[] calArray = {"100","200","300","400","500"};
-    String[] foodArray = {"Omelet","Fried rice","Noodle","Banana","Coke"};
+    String[] foodArray = {"ไข่เจียว","ข้าวผัด","ก๋วยเตี๋ยว","กล้วย","โค๊ก"};
 
     @Nullable
     @Override

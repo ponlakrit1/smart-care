@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Food name"
+            android:text="ชื่ออาหาร"
             android:textSize="20dp"
             android:id="@+id/foodName"/>
 
@@ -24,28 +24,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="0 cal"
-            android:textSize="15dp"
+            android:text="0 แคลอรี่"
+            android:textSize="20dp"
             android:id="@+id/foodCalNum"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amount"
+            android:text="จำนวน"
             android:textSize="15dp"/>
 
-        <EditText
+        <SeekBar
+            android:id="@+id/seekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:layout_marginBottom="10dp"/>
+            android:paddingBottom="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Time"
+            android:text="ช่วงเวลา"
             android:textSize="15dp" />
 
         <Spinner
@@ -63,7 +63,7 @@
             android:background="#c96f53"
             android:textColor="#ffffff"
             android:textSize="18sp"
-            android:text="Submit"/>
+            android:text="บันทึก"/>
 
     </LinearLayout>
 

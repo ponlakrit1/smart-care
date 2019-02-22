@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Username"
+            android:text="ชื่อผู้ใช้งาน"
             android:textSize="15dp" />
 
         <EditText
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Password"
+            android:text="รหัสผ่าน"
             android:textSize="15dp" />
 
         <EditText
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Re-password"
+            android:text="รหัสผ่าน อีกครั้ง"
             android:textSize="15dp" />
 
         <EditText
@@ -82,7 +82,7 @@
             android:background="#c96f53"
             android:textColor="#ffffff"
             android:textSize="18sp"
-            android:text="Submit"/>
+            android:text="บันทึก"/>
 
     </LinearLayout>
 

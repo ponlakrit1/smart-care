@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:background="#c96f53"
-                android:text="Search"
+                android:text="ค้นหา"
                 android:textColor="#ffffff" />
 
             <EditText
