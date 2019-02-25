@@ -36,6 +36,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new HomeFragment()).commit();
         navigationView.setCheckedItem(R.id.nav_home);
+        getSupportActionBar().setTitle("หน้าแรก");
     }
 
     @Override
@@ -46,10 +47,9 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Warning");
-        builder.setMessage("Quit?");
-        builder.setPositiveButton("OK", this);
-        builder.setNegativeButton("Cancel", this);
+        builder.setMessage("ต้องการออกจากระบบ ?");
+        builder.setPositiveButton("ตกลง", this);
+        builder.setNegativeButton("ยกเลิก", this);
         builder.setCancelable(false);
         AlertDialog dialog = builder.create();
         dialog.show();
@@ -79,6 +79,8 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
+        getSupportActionBar().setTitle(item.getTitle());
 
         if (id == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new HomeFragment()).commit();

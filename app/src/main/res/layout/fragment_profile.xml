@@ -107,6 +107,21 @@
             android:prompt="@string/spinner_prompt"
             android:entries="@array/blood" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Code HN"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/txt_codeHNProfile"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

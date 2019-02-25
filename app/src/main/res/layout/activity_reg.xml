@@ -24,7 +24,7 @@
             android:textSize="15dp" />
 
         <EditText
-            android:id="@+id/txt_username"
+            android:id="@+id/txtUsernameReg"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:textSize="15dp" />
 
         <EditText
-            android:id="@+id/txt_password"
+            android:id="@+id/txtPasswordReg"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             android:textSize="15dp" />
 
         <EditText
-            android:id="@+id/txt_reRassword"
+            android:id="@+id/txtReRasswordReg"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,6 +67,107 @@
             android:layout_centerVertical="true"
             android:text="Code HN"
             android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/txt_codeHNReg"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="ชื่อ"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/txtNameReg"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="นามสกุล"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/txtLastnameReg"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="วันเกิด"
+            android:textSize="15dp" />
+
+        <!--<EditText-->
+            <!--android:id="@+id/Birthday"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:focusable="false"-->
+            <!--android:onClick="selectDate"-->
+            <!--android:inputType="date"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="น้ำหนัก"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/txt_weight"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="ส่วนสูง"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/txt_height"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="กรุ๊ปเลือด"
+            android:textSize="15dp" />
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/spBlood"
+            android:prompt="@string/spinner_prompt"
+            android:entries="@array/blood" />
 
         <EditText
             android:id="@+id/txt_codeHN"

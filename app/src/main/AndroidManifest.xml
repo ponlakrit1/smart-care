@@ -9,8 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConsumptionActivity"></activity>
-        <activity android:name=".RegActivity" />
+        <activity
+            android:name=".ConsumptionActivity"
+            android:label="อาหาร">
+        </activity>
+        <activity
+            android:name=".RegActivity"
+            android:label="สมัครสมาชิค"
+            android:parentActivityName=".MainActivity">
+        </activity>
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
