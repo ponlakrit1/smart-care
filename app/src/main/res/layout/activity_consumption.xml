@@ -13,24 +13,33 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ชื่ออาหาร"
-            android:textSize="20dp"
-            android:id="@+id/foodName"/>
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ชื่ออาหาร"
+                android:textSize="20dp"
+                android:id="@+id/foodName"/>
+
+            <TextView
+                android:id="@+id/foodCalNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0 แคลอรี่"
+                android:textSize="30dp" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="0 แคลอรี่"
-            android:textSize="20dp"
-            android:id="@+id/foodCalNum"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/foodAmount"
             android:paddingBottom="10dp"
             android:text="จำนวน 0"
             android:textSize="15dp"/>
@@ -39,7 +48,7 @@
             android:id="@+id/seekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"/>
+            android:paddingBottom="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
