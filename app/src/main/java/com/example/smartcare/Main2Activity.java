@@ -2,6 +2,7 @@ package com.example.smartcare;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,10 +13,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, DialogInterface.OnClickListener{
 
     private DrawerLayout drawer;
+    SharedPreferences prefs;
+
+    TextView headername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +42,21 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        // Set toolbar string
         getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new HomeFragment()).commit();
         navigationView.setCheckedItem(R.id.nav_home);
         getSupportActionBar().setTitle("หน้าแรก");
+
+        // Set header name
+        View header = navigationView.getHeaderView(0);
+
+        prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String getName = prefs.getString("name", null);
+        String getLastname = prefs.getString("lastname", null);
+
+        headername = (TextView) header.findViewById(R.id.headername);
+        headername.setText(getName+" "+getLastname);
+
     }
 
     @Override

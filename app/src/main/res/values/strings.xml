@@ -23,4 +23,10 @@
         <item>อาหารเย็น</item>
         <item>ของว่าง</item>
     </string-array>
+
+    <string name="spinner_Gender">กรุณาเลือกเพศ</string>
+    <string-array name="gender">
+        <item>ชาย</item>
+        <item>หญิง</item>
+    </string-array>
 </resources>

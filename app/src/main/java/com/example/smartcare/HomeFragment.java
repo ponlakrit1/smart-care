@@ -41,6 +41,7 @@ public class HomeFragment extends Fragment {
         TextView statusText = (TextView) view.findViewById(R.id.tvBMIResult);
         statusText.setTextColor(Color.GREEN);
 
+        // Set graph view android
         Calendar calendar = Calendar.getInstance();
         for(int i=0; i<4; i++){
             dayShow[i] = calendar.getTime();
