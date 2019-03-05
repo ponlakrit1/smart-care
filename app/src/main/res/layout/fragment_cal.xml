@@ -54,9 +54,9 @@
     <ProgressBar
         style="?android:progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:progress="75"
+        android:progress="0"
         android:max="100"
         android:progressDrawable="@drawable/circle"
         android:id="@+id/pbCal"
@@ -68,15 +68,25 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="130dp"
         android:text="1530"
-        android:textSize="50dp" />
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/tvCalSuggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/pbCal"
+        android:text="ปริมาณที่แนะนำต่อวัน 0 แคลอรี่"
+        android:layout_marginBottom="10dp"
+        android:textSize="15dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/pbCal" >
+        android:layout_below="@+id/tvCalSuggest" >
 
         <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"

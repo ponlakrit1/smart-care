@@ -1,5 +1,6 @@
 package com.example.smartcare;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -22,6 +23,7 @@ import org.eazegraph.lib.charts.ValueLineChart;
 import org.eazegraph.lib.models.BarModel;
 import org.eazegraph.lib.models.ValueLinePoint;
 import org.eazegraph.lib.models.ValueLineSeries;
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -31,6 +33,12 @@ public class HomeFragment extends Fragment {
 
     View view;
     Date dayShow[] = new Date[4];
+    SharedPreferences prefs;
+
+    TextView tvHeight;
+    TextView tvWeight;
+    TextView tvBMI;
+    TextView tvBMIResult;
 
     @Nullable
     @Override
@@ -40,6 +48,9 @@ public class HomeFragment extends Fragment {
 
         TextView statusText = (TextView) view.findViewById(R.id.tvBMIResult);
         statusText.setTextColor(Color.GREEN);
+
+        // Init data
+        initUserDetail();
 
         // Set graph view android
         Calendar calendar = Calendar.getInstance();
@@ -79,5 +90,40 @@ public class HomeFragment extends Fragment {
         graph.addSeries(seriesData);
 
         return view;
+    }
+
+    public void initUserDetail(){
+        prefs = getActivity().getSharedPreferences("MyPref", getActivity().MODE_PRIVATE);
+        tvHeight = (TextView) view.findViewById(R.id.tvHeight);
+        tvWeight = (TextView) view.findViewById(R.id.tvWeight);
+        tvBMI = (TextView) view.findViewById(R.id.tvBMI);
+        tvBMIResult = (TextView) view.findViewById(R.id.tvBMIResult);
+
+        float weight = prefs.getFloat("weight", 0);
+        float height = prefs.getFloat("height", 0);
+        float bmiValue = weight/((height/100)*2);
+
+        if(bmiValue < 18.5){
+            tvBMIResult.setText("น้ำหนักน้อยเกินไป");
+            tvBMIResult.setTextColor(Color.DKGRAY);
+        } else if(bmiValue >= 18.5 && bmiValue < 22.9){
+            tvBMIResult.setText("เท่าคนปกติ");
+            tvBMIResult.setTextColor(Color.GREEN);
+        } else if(bmiValue >= 22.9 && bmiValue < 24.9){
+            tvBMIResult.setText("อันตรายระดับ 1");
+            tvBMIResult.setTextColor(Color.YELLOW);
+        } else if(bmiValue >= 24.9 && bmiValue < 29.9){
+            tvBMIResult.setText("อันตรายระดับ 2");
+            tvBMIResult.setTextColor(Color.RED);
+        } else {
+            tvBMIResult.setText("อันตรายระดับ 3");
+            tvBMIResult.setTextColor(Color.RED);
+        }
+
+        tvBMI.setText(""+bmiValue);
+        tvHeight.setText(""+height);
+        tvWeight.setText(""+weight);
+
+
     }
 }

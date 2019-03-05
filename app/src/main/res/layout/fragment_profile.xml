@@ -101,6 +101,23 @@
                 android:layout_marginBottom="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:text="เพศ"
+                android:textSize="15dp" />
+
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/spGenderProfile"
+                android:prompt="@string/spinner_Gender"
+                android:entries="@array/gender" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:text="กรุ๊ปเลือด"
                 android:textSize="15dp" />
 
@@ -128,6 +145,7 @@
                 android:inputType="textPersonName"/>
 
             <Button
+                android:id="@+id/profileBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
