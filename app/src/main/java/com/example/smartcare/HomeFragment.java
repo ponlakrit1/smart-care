@@ -51,6 +51,7 @@ public class HomeFragment extends Fragment {
 
         // Init data
         initUserDetail();
+        genGraph();
 
         // Set graph view android
         Calendar calendar = Calendar.getInstance();
@@ -67,6 +68,8 @@ public class HomeFragment extends Fragment {
                 new DataPoint(dayShow[1], 1400),
                 new DataPoint(dayShow[0], 1540)
         });
+        int myColor = getResources().getColor(R.color.colorAccent);
+        seriesData.setColor(myColor);
         seriesData.setDrawDataPoints(true);
 
         LineGraphSeries<DataPoint> seriesLine = new LineGraphSeries<>(new DataPoint[] {
@@ -124,6 +127,9 @@ public class HomeFragment extends Fragment {
         tvHeight.setText(""+height);
         tvWeight.setText(""+weight);
 
+    }
+
+    public void genGraph(){
 
     }
 }

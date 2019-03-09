@@ -60,6 +60,7 @@
         android:max="100"
         android:progressDrawable="@drawable/circle"
         android:id="@+id/pbCal"
+        android:rotation="-90"
         android:layout_below="@+id/layoutDate" />
 
     <TextView

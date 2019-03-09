@@ -138,6 +138,5 @@ public class CalFragment extends Fragment {
         int progress = (100 * numberOfCal) / maxOfCal;
         pbCal = (ProgressBar) view.findViewById(R.id.pbCal);
         pbCal.setProgress(progress);
-
     }
 }

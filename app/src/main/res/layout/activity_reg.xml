@@ -195,7 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:background="#c96f53"
+                android:background="@color/colorButton"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
                 android:onClick="onSubmitReg"

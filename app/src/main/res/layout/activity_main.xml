@@ -2,7 +2,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#ffc4b2"
+    android:background="@color/colorBackground"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
@@ -19,14 +19,14 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@drawable/heart" />
+            app:srcCompat="@drawable/logo_hospital" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Smart care"
-            android:textColor="#c96f53"
+            android:textColor="@color/colorAccent"
             android:textSize="24sp" />
 
         <EditText
@@ -57,7 +57,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#c96f53"
+                android:background="@color/colorButton"
                 android:onClick="onRegister"
                 android:text="สมัครสมาชิค"
                 android:textColor="#ffffff"
@@ -71,7 +71,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#c96f53"
+                android:background="@color/colorButton"
                 android:onClick="onLogin"
                 android:text="เข้าสู่ระบบ"
                 android:textColor="#ffffff"
