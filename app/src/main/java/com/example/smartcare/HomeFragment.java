@@ -53,45 +53,6 @@ public class HomeFragment extends Fragment {
         initUserDetail();
         genGraph();
 
-        // Set graph view android
-        Calendar calendar = Calendar.getInstance();
-        for(int i=0; i<4; i++){
-            dayShow[i] = calendar.getTime();
-            calendar.add(Calendar.DATE, -1);
-        }
-
-        GraphView graph = (GraphView) view.findViewById(R.id.graph);
-
-        LineGraphSeries<DataPoint> seriesData = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(dayShow[3], 1650),
-                new DataPoint(dayShow[2], 1650),
-                new DataPoint(dayShow[1], 1400),
-                new DataPoint(dayShow[0], 1540)
-        });
-        int myColor = getResources().getColor(R.color.colorAccent);
-        seriesData.setColor(myColor);
-        seriesData.setDrawDataPoints(true);
-
-        LineGraphSeries<DataPoint> seriesLine = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(dayShow[3], 1500),
-                new DataPoint(dayShow[2], 1500),
-                new DataPoint(dayShow[1], 1500),
-                new DataPoint(dayShow[0], 1500),
-        });
-        seriesLine.setColor(Color.RED);
-
-        graph.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(getActivity()));
-        graph.getGridLabelRenderer().setNumHorizontalLabels(4);
-        graph.getGridLabelRenderer().setHumanRounding(false);
-
-        graph.getViewport().setMinY(0);
-        graph.getViewport().setMinX(dayShow[dayShow.length-1].getTime());
-        graph.getViewport().setMaxX(dayShow[0].getTime());
-        graph.getViewport().setXAxisBoundsManual(true);
-
-        graph.addSeries(seriesLine);
-        graph.addSeries(seriesData);
-
         return view;
     }
 
@@ -130,6 +91,42 @@ public class HomeFragment extends Fragment {
     }
 
     public void genGraph(){
+        Calendar calendar = Calendar.getInstance();
+        for(int i=0; i<4; i++){
+            dayShow[i] = calendar.getTime();
+            calendar.add(Calendar.DATE, -1);
+        }
 
+        GraphView graph = (GraphView) view.findViewById(R.id.graph);
+
+        LineGraphSeries<DataPoint> seriesData = new LineGraphSeries<>(new DataPoint[] {
+                new DataPoint(dayShow[3], 1650),
+                new DataPoint(dayShow[2], 1650),
+                new DataPoint(dayShow[1], 1400),
+                new DataPoint(dayShow[0], 1540)
+        });
+        int myColor = getResources().getColor(R.color.colorAccent);
+        seriesData.setColor(myColor);
+        seriesData.setDrawDataPoints(true);
+
+        LineGraphSeries<DataPoint> seriesLine = new LineGraphSeries<>(new DataPoint[] {
+                new DataPoint(dayShow[3], 1500),
+                new DataPoint(dayShow[2], 1500),
+                new DataPoint(dayShow[1], 1500),
+                new DataPoint(dayShow[0], 1500),
+        });
+        seriesLine.setColor(Color.RED);
+
+        graph.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(getActivity()));
+        graph.getGridLabelRenderer().setNumHorizontalLabels(4);
+        graph.getGridLabelRenderer().setHumanRounding(false);
+
+        graph.getViewport().setMinY(0);
+        graph.getViewport().setMinX(dayShow[dayShow.length-1].getTime());
+        graph.getViewport().setMaxX(dayShow[0].getTime());
+        graph.getViewport().setXAxisBoundsManual(true);
+
+        graph.addSeries(seriesLine);
+        graph.addSeries(seriesData);
     }
 }

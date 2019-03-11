@@ -32,9 +32,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLogin(View view) {
-        Intent myIntent = new Intent(MainActivity.this, Main2Activity.class);
-        MainActivity.this.startActivity(myIntent);
-        finish();
+        if(txtUsername.getText().toString().equals("") && txtPassword.getText().toString().equals("")){
+            Toast.makeText(this, "กรุณาสมัครสมาชิกก่อน", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent myIntent = new Intent(MainActivity.this, Main2Activity.class);
+            MainActivity.this.startActivity(myIntent);
+            finish();
+        }
 
     }
 

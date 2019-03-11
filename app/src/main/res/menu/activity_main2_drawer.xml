@@ -9,13 +9,13 @@
             android:icon="@drawable/ic_menu_home"
             android:title="หน้าแรก" />
         <item
-            android:id="@+id/nav_food"
-            android:icon="@drawable/ic_menu_food"
-            android:title="อาหาร" />
-        <item
             android:id="@+id/nav_cal"
             android:icon="@drawable/ic_menu_cal"
             android:title="แคลอรี่ต่อวัน" />
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/ic_menu_food"
+            android:title="อาหาร" />
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_menu_profile"

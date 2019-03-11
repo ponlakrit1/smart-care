@@ -15,7 +15,7 @@
         </activity>
         <activity
             android:name=".RegActivity"
-            android:label="สมัครสมาชิค"
+            android:label="สมัครสมาชิก"
             android:parentActivityName=".MainActivity">
         </activity>
         <activity

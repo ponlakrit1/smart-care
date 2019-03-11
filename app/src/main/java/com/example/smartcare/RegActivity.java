@@ -85,7 +85,7 @@ public class RegActivity extends AppCompatActivity implements DatePickerDialog.O
             pref.putString("codehn", codeHNReg.getText().toString());
             pref.apply();
 
-            Toast toast = Toast.makeText(this, "สมัครสมาชิคสำเร็จ", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(this, "สมัครสมาชิกสำเร็จ", Toast.LENGTH_SHORT);
             toast.show();
 
             Intent myIntent = new Intent(RegActivity.this, MainActivity.class);

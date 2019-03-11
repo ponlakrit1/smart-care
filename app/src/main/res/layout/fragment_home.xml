@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:padding="10dp"
-            android:text="การบริโภคต่อวัน"
+            android:text="พลังงานที่ได้รับต่อวัน"
             android:textSize="15dp"
             android:id="@+id/tvDaily" />
 

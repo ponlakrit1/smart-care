@@ -59,7 +59,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@color/colorButton"
                 android:onClick="onRegister"
-                android:text="สมัครสมาชิค"
+                android:text="สมัครสมาชิก"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
 

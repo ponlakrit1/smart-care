@@ -54,13 +54,7 @@ public class ProfileFragment extends Fragment{
         txtAge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Calendar c = Calendar.getInstance();
-                int year = c.get(Calendar.YEAR);
-                int month = c.get(Calendar.MONTH);
-                int day = c.get(Calendar.DAY_OF_MONTH);
-                DatePickerDialog dialog = new DatePickerDialog(getActivity(), android.R.style.Theme_Holo_Light_Dialog_MinWidth, dateSetListener, year, month, day);
-                dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-                dialog.show();
+                onSelectDate();
             }
         });
 
@@ -125,6 +119,16 @@ public class ProfileFragment extends Fragment{
 
         Toast toast = Toast.makeText(getActivity(), "บันทึกการแก้ไขสำเร็จ", Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+    public void onSelectDate(){
+        Calendar c = Calendar.getInstance();
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH);
+        int day = c.get(Calendar.DAY_OF_MONTH);
+        DatePickerDialog dialog = new DatePickerDialog(getActivity(), android.R.style.Theme_Holo_Light_Dialog_MinWidth, dateSetListener, year, month, day);
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        dialog.show();
     }
 
 }
