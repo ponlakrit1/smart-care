@@ -110,6 +110,8 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new CalFragment()).commit();
         } else if (id == R.id.nav_profile) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new ProfileFragment()).commit();
+        } else if (id == R.id.nav_activity) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new ActivityFragment()).commit();
         } else if (id == R.id.nav_logout){
             Intent myIntent = new Intent(Main2Activity.this, MainActivity.class);
             Main2Activity.this.startActivity(myIntent);
