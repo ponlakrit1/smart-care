@@ -1,5 +1,6 @@
 package com.example.smartcare;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -83,10 +84,15 @@ public class CalFragment extends Fragment {
     }
 
     public void changeFragment(){
-        Fragment newFragment = new FoodFragment();
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.container_main, newFragment);
-        transaction.commit();
+//        Fragment newFragment = new FoodFragment();
+//        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//        transaction.replace(R.id.container_main, newFragment);
+//        transaction.commit();
+
+        // Go to camera classifier
+        Intent myIntent = new Intent(getActivity(), ClassifierActivity.class);
+        getActivity().startActivity(myIntent);
+        getActivity().finish();
     }
 
     public void initCal(){
