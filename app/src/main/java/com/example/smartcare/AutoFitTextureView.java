@@ -20,10 +20,14 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.TextureView;
 
+import com.example.smartcare.env.Logger;
+
 /**
  * A {@link TextureView} that can be adjusted to a specified aspect ratio.
  */
 public class AutoFitTextureView extends TextureView {
+  private static final Logger LOGGER = new Logger();
+
   private int ratioWidth = 0;
   private int ratioHeight = 0;
 
@@ -61,11 +65,13 @@ public class AutoFitTextureView extends TextureView {
     super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     final int width = MeasureSpec.getSize(widthMeasureSpec);
     final int height = MeasureSpec.getSize(heightMeasureSpec);
+
     if (0 == ratioWidth || 0 == ratioHeight) {
       setMeasuredDimension(width, height);
     } else {
       if (width < height * ratioWidth / ratioHeight) {
-        setMeasuredDimension(width, width * ratioHeight / ratioWidth);
+//        setMeasuredDimension(width, width * ratioHeight / ratioWidth);
+        setMeasuredDimension(width, height);
       } else {
         setMeasuredDimension(height * ratioWidth / ratioHeight, height);
       }

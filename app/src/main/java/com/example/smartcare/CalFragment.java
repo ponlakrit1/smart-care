@@ -92,7 +92,7 @@ public class CalFragment extends Fragment {
         // Go to camera classifier
         Intent myIntent = new Intent(getActivity(), ClassifierActivity.class);
         getActivity().startActivity(myIntent);
-        getActivity().finish();
+//        getActivity().finish();
     }
 
     public void initCal(){

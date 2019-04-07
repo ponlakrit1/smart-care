@@ -23,10 +23,15 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.media.ImageReader.OnImageAvailableListener;
+import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 import com.example.smartcare.OverlayView.DrawCallback;
@@ -94,6 +99,9 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
 
   private BorderedText borderedText;
 
+  private ArrayList<String> resultPaintArray = new ArrayList<String>();
+  private boolean dupStatus = false;
+  Spinner spinnerResult;
 
   @Override
   protected int getLayoutId() {
@@ -166,6 +174,12 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     if (SAVE_PREVIEW_BITMAP) {
       ImageUtils.saveBitmap(croppedBitmap);
     }
+
+    spinnerResult = (Spinner) findViewById(R.id.spinner_result);
+    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, resultPaintArray);
+    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    spinnerResult.setAdapter(adapter);
+
     runInBackground(
         new Runnable() {
           @Override
@@ -173,16 +187,34 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             final long startTime = SystemClock.uptimeMillis();
             final List<Classifier.Recognition> results = classifier.recognizeImage(croppedBitmap);
             lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
-            LOGGER.i("Detect: %s", results);
             cropCopyBitmap = Bitmap.createBitmap(croppedBitmap);
-            if (resultsView == null) {
-              resultsView = (ResultsView) findViewById(R.id.results);
-            }
-            resultsView.setResults(results);
+//            if (resultsView == null) {
+//              resultsView = (ResultsView) findViewById(R.id.results);
+//            }
+//            resultsView.setResults(results);
+            // Edit by tine
+            setSpinner(results);
             requestRender();
             readyForNextImage();
           }
         });
+  }
+
+  private void setSpinner(final List<Classifier.Recognition> results){
+    if (results != null) {
+      for (final Classifier.Recognition recog : results) {
+
+        if(recog.getConfidence() > 0.50) {
+
+          dupStatus = resultPaintArray.contains(recog.getTitle());
+          if(dupStatus == false){
+            resultPaintArray.add(recog.getTitle());
+          }
+
+        }
+
+      }
+    }
   }
 
   @Override

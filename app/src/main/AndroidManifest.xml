@@ -34,13 +34,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.smartcare.ClassifierActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/activity_name_classification">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".ClassifierActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
