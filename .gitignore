@@ -12,4 +12,4 @@
 /captures
 .externalNativeBuild
 
-/.app/src/main/assets/*
+/app/src/main/assets
