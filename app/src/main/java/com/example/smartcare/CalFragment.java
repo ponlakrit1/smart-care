@@ -9,6 +9,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -93,6 +94,12 @@ public class CalFragment extends Fragment {
         Intent myIntent = new Intent(getActivity(), ClassifierActivity.class);
         getActivity().startActivity(myIntent);
 //        getActivity().finish();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        initCal();
     }
 
     public void initCal(){

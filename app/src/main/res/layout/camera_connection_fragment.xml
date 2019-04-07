@@ -39,9 +39,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:background="@color/colorButton"
+            android:onClick="onSendFood"
+            android:text="ตกลง"
             android:textColor="#ffffff"
-            android:textSize="18sp"
-            android:text="ตกลง" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 

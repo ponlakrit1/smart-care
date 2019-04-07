@@ -16,6 +16,7 @@
 
 package com.example.smartcare;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -28,8 +29,10 @@ import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -215,6 +218,19 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
 
       }
     }
+  }
+
+  public void onSendFood(View view){
+    String text = spinnerResult.getSelectedItem().toString();
+    String[] arrOfStr = text.split(" : ");
+//    Toast toast = Toast.makeText(this, arrOfStr[0]+" | "+arrOfStr[1], Toast.LENGTH_SHORT);
+//    toast.show();
+
+    Intent myIntent = new Intent(ClassifierActivity.this, ConsumptionActivity.class);
+    myIntent.putExtra("foodName", arrOfStr[0]);
+    myIntent.putExtra("foodCal", arrOfStr[1]);
+    ClassifierActivity.this.startActivity(myIntent);
+    finish();
   }
 
   @Override
