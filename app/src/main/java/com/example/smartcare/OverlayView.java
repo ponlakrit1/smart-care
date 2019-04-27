@@ -15,10 +15,14 @@ limitations under the License.
 
 package com.example.smartcare;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.example.smartcare.env.Logger;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -26,10 +30,14 @@ import java.util.List;
  * A simple View providing a render callback to other classes.
  */
 public class OverlayView extends View {
+  private static final Logger LOGGER = new Logger();
   private final List<DrawCallback> callbacks = new LinkedList<DrawCallback>();
+
+  private ProgressDialog loadingDialog;
 
   public OverlayView(final Context context, final AttributeSet attrs) {
     super(context, attrs);
+    loadingDialog = ProgressDialog.show(context, "กำลังเปิดกล้อง", "กรุณารอสักครู่ ...", true, false);
   }
 
   /**
@@ -41,6 +49,7 @@ public class OverlayView extends View {
 
   public void addCallback(final DrawCallback callback) {
     callbacks.add(callback);
+    loadingDialog.dismiss();
   }
 
   @Override

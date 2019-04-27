@@ -16,8 +16,10 @@
 
 package com.example.smartcare;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.TextureView;
 
 import com.example.smartcare.env.Logger;
