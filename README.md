@@ -1,6 +1,6 @@
 # smart-care
 Smart care application.
-An application built with Java.
+An application built with Java and recognize image by tensorflow
 
 ## Project Status
 
